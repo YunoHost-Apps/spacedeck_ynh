@@ -17,7 +17,7 @@ old_domain=$YNH_APP_OLD_DOMAIN
 old_path=$YNH_APP_OLD_PATH
 
 new_domain=$YNH_APP_NEW_DOMAIN
-new_path=$YNH_APP_NEW_PATH
+new_path="/" #$YNH_APP_NEW_PATH
 
 app=$YNH_APP_INSTANCE_NAME
 
@@ -108,8 +108,13 @@ fi
 #=================================================
 # SPECIFIC MODIFICATIONS
 #=================================================
-# ...
+# ADD A CONFIGURATION
 #=================================================
+
+ynh_add_config --template="default.json" --destination="$final_path/config/default.json"
+
+chmod 400 "$final_path/config/default.json"
+chown $app:$app "$final_path/config/default.json"
 
 #=================================================
 # GENERIC FINALISATION

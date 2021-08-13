@@ -1,5 +1,5 @@
 [Unit]
-Description=Small description of the service
+Description=__APP__ service
 After=network.target
 
 [Service]
@@ -7,7 +7,8 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__FINALPATH__/
-ExecStart=__FINALPATH__/script
+Environment="__YNH_NODE_LOAD_PATH__"
+ExecStart=__YNH_NODE__ spacedeck.js
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 

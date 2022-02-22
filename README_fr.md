@@ -11,6 +11,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
+A web based, real time, collaborative whiteboard application with rich media support
 
 
 **Version incluse :** 2021-08-10~ynh1
@@ -27,7 +28,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 * There is no integration with YunoHost SSO
 ## Documentations et ressources
 
-* Site officiel de l'app : https://spacedeck.com/
+* Site officiel de l'app : https://spacedeck.com
 * Dépôt de code officiel de l'app : https://github.com/spacedeck/spacedeck-open
 * Documentation YunoHost pour cette app : https://yunohost.org/app_spacedeck
 * Signaler un bug : https://github.com/YunoHost-Apps/spacedeck_ynh/issues

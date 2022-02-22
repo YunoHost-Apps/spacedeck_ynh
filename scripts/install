@@ -104,12 +104,6 @@ ynh_add_nginx_config
 #=================================================
 ynh_script_progression --message="Installing NodeJS dependencies..." --time --weight=1
 
-invite_secret=$(ynh_string_random --length=32)
-api_secret=$(ynh_string_random --length=32)
-
-ynh_app_setting_set --app=$app --key=invite_secret --value=$invite_secret
-ynh_app_setting_set --app=$app --key=api_secret --value=$api_secret
-
 pushd $final_path
 	ynh_exec_as $app $ynh_node_load_PATH $ynh_npm --loglevel=error install
 	ynh_exec_as $app $ynh_node_load_PATH $ynh_npm --loglevel=error audit fix
@@ -133,6 +127,12 @@ chown -R $app:www-data "$datadir"
 # ADD A CONFIGURATION
 #=================================================
 ynh_script_progression --message="Adding a configuration file..." --time --weight=1
+
+invite_secret=$(ynh_string_random --length=32)
+api_secret=$(ynh_string_random --length=32)
+
+ynh_app_setting_set --app=$app --key=invite_secret --value=$invite_secret
+ynh_app_setting_set --app=$app --key=api_secret --value=$api_secret
 
 ynh_add_config --template="default.json" --destination="$final_path/config/default.json"
 

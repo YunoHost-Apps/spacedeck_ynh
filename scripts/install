@@ -14,7 +14,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 
 ynh_clean_setup () {
-	read -p "debug me"
+	ynh_clean_check_starting
 }
 # Exit if an error occurs during the execution of the script
 ynh_abort_if_errors
@@ -24,7 +24,7 @@ ynh_abort_if_errors
 #=================================================
 
 domain=$YNH_APP_ARG_DOMAIN
-path_url="/" #$YNH_APP_ARG_PATH
+path_url="/"
 is_public=$YNH_APP_ARG_IS_PUBLIC
 
 app=$YNH_APP_INSTANCE_NAME
@@ -66,7 +66,7 @@ ynh_script_progression --message="Installing dependencies..." --time --weight=1
 
 ynh_install_app_dependencies $pkg_dependencies
 
-ynh_install_nodejs --nodejs_version=10
+ynh_install_nodejs --nodejs_version=$NODEJS_VERSION
 
 #=================================================
 # CREATE DEDICATED USER
@@ -120,24 +120,11 @@ popd
 #=================================================
 ynh_script_progression --message="Creating a data directory..." --time --weight=1
 
-### Use these lines if you need to create a directory to store "persistent files" for the application.
-### Usually this directory is used to store uploaded files or any file that won't be updated during 
-### an upgrade and that won't be deleted during app removal
-### If you're not using these lines:
-###		- Remove the section "BACKUP THE DATA DIR" in the backup script
-###		- As well as the section "RESTORE THE DATA DIRECTORY" in the restore script
-
 datadir=/home/yunohost.app/$app
 ynh_app_setting_set --app=$app --key=datadir --value=$datadir
 
 mkdir -p $datadir/storage
 
-# FIXME: this should be managed by the core in the future
-# Here, as a packager, you may have to tweak the ownerhsip/permissions
-# such that the appropriate users (e.g. maybe www-data) can access
-# files in some cases.
-# But FOR THE LOVE OF GOD, do not allow r/x for "others" on the entire folder -
-# this will be treated as a security issue.
 chmod 750 "$datadir"
 chmod -R o-rwx "$datadir"
 chown -R $app:www-data "$datadir"

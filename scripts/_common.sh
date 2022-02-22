@@ -4,6 +4,7 @@
 # COMMON VARIABLES
 #=================================================
 
+NODEJS_VERSION=10
 # dependencies used by the app
 pkg_dependencies="graphicsmagick ffmpeg ghostscript"
 

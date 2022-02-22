@@ -18,6 +18,7 @@ app=$YNH_APP_INSTANCE_NAME
 
 domain=$(ynh_app_setting_get --app=$app --key=domain)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
+datadir=$(ynh_app_setting_get --app=$app --key=datadir)
 
 #=================================================
 # STANDARD REMOVE
@@ -41,12 +42,12 @@ ynh_script_progression --message="Stopping and removing the systemd service..." 
 ynh_remove_systemd_config
 
 #=================================================
-# REMOVE DEPENDENCIES
+# REMOVE LOGROTATE CONFIGURATION
 #=================================================
-ynh_script_progression --message="Removing dependencies..." --time --weight=1
+ynh_script_progression --message="Removing logrotate configuration..." --time --weight=1
 
-# Remove metapackage and its dependencies
-ynh_remove_app_dependencies
+# Remove the app-specific logrotate config
+ynh_remove_logrotate
 
 #=================================================
 # REMOVE APP MAIN DIR
@@ -57,6 +58,17 @@ ynh_script_progression --message="Removing app main directory..." --time --weigh
 ynh_secure_remove --file="$final_path"
 
 #=================================================
+# REMOVE DATA DIR
+#=================================================
+
+# Remove the data directory if --purge option is used
+if [ "${YNH_APP_PURGE:-0}" -eq 1 ]
+then
+	ynh_script_progression --message="Removing app data directory..."
+	ynh_secure_remove --file="$datadir"
+fi
+
+#=================================================
 # REMOVE NGINX CONFIGURATION
 #=================================================
 ynh_script_progression --message="Removing NGINX web server configuration..." --time --weight=1
@@ -65,12 +77,13 @@ ynh_script_progression --message="Removing NGINX web server configuration..." --
 ynh_remove_nginx_config
 
 #=================================================
-# REMOVE LOGROTATE CONFIGURATION
+# REMOVE DEPENDENCIES
 #=================================================
-ynh_script_progression --message="Removing logrotate configuration..." --time --weight=1
+ynh_script_progression --message="Removing dependencies..." --time --weight=1
 
-# Remove the app-specific logrotate config
-ynh_remove_logrotate
+# Remove metapackage and its dependencies
+ynh_remove_nodejs
+ynh_remove_app_dependencies
 
 #=================================================
 # SPECIFIC REMOVE
@@ -78,9 +91,6 @@ ynh_remove_logrotate
 # REMOVE VARIOUS FILES
 #=================================================
 ynh_script_progression --message="Removing various files..." --time --weight=1
-
-# Remove a cron file
-ynh_secure_remove --file="/home/yunohost.app/$app"
 
 # Remove the log files
 ynh_secure_remove --file="/var/log/$app"

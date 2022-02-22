@@ -5,7 +5,7 @@
     "description": {
         "en": "A web based, real time, collaborative whiteboard application with rich media support"
     },
-    "version": "2021-08-10~ynh1",
+    "version": "2021.08.10~ynh1",
     "url": "https://spacedeck.com",
     "upstream": {
         "license": "AGPL-3.0-only",

@@ -133,7 +133,7 @@ popd
 #=================================================
 ynh_script_progression --message="Updating a configuration file..." --time --weight=1
 
-ynh_add_config --template="default.json" --destination="$final_path/config/default.json"
+ynh_add_config --template="../conf/default.json" --destination="$final_path/config/default.json"
 
 chmod 400 "$final_path/config/default.json"
 chown $app:$app "$final_path/config/default.json"

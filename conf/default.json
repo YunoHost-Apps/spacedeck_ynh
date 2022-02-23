@@ -4,7 +4,7 @@
   
     "host": "localhost",
     "port": __PORT__,
-    "endpoint": "https://__DOMAIN__/__PATH__",
+    "endpoint": "https://__DOMAIN____PATH__",
     "invite_code": "__INVITE_SECRET__",
   
     "storage_dialect": "sqlite",

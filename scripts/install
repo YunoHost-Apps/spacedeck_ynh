@@ -134,7 +134,7 @@ api_secret=$(ynh_string_random --length=32)
 ynh_app_setting_set --app=$app --key=invite_secret --value=$invite_secret
 ynh_app_setting_set --app=$app --key=api_secret --value=$api_secret
 
-ynh_add_config --template="default.json" --destination="$final_path/config/default.json"
+ynh_add_config --template="../conf/default.json" --destination="$final_path/config/default.json"
 
 chmod 400 "$final_path/config/default.json"
 chown $app:$app "$final_path/config/default.json"

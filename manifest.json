@@ -5,11 +5,11 @@
     "description": {
         "en": "A web based, real time, collaborative whiteboard application with rich media support"
     },
-    "version": "2021-08-10~ynh1",
-    "url": "https://spacedeck.com/",
+    "version": "2021.08.10~ynh1",
+    "url": "https://spacedeck.com",
     "upstream": {
         "license": "AGPL-3.0-only",
-        "website": "https://spacedeck.com/",
+        "website": "https://spacedeck.com",
         "code": "https://github.com/spacedeck/spacedeck-open"
     },
     "license": "AGPL-3.0-only",
@@ -18,26 +18,22 @@
         "email": "tituspijean@outlook.com"
     },
     "requirements": {
-        "yunohost": ">= 4.1.7"
+        "yunohost": ">= 4.3.0"
     },
     "multi_instance": true,
     "services": [
         "nginx"
     ],
     "arguments": {
-        "install" : [
+        "install": [
             {
                 "name": "domain",
-                "type": "domain",
-                "example": "example.com"
+                "type": "domain"
             },
             {
                 "name": "is_public",
                 "type": "boolean",
-                "default": true,
-                "help": {
-                    "en": "Should any visitor be allowed to access Spacedeck without being a YunoHost user?"
-                }
+                "default": true
             }
         ]
     }

@@ -28,6 +28,11 @@ ynh_script_progression --message="Loading installation settings..." --time --wei
 
 # Needed for helper "ynh_add_nginx_config"
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
+domain=$(ynh_app_setting_get --app=$app --key=domain)
+port=$(ynh_app_setting_get --app=$app --key=port)
+datadir=$(ynh_app_setting_get --app=$app --key=datadir)
+api_secret=$(ynh_app_setting_get --app=$app --key=api_secret)
+invite_secret=$(ynh_app_setting_get --app=$app --key=invite_secret)
 
 # Add settings here as needed by your application
 #db_name=$(ynh_app_setting_get --app=$app --key=db_name)
@@ -108,10 +113,14 @@ fi
 #=================================================
 # SPECIFIC MODIFICATIONS
 #=================================================
-# ADD A CONFIGURATION
+# UPDATE A CONFIG FILE
 #=================================================
+ynh_script_progression --message="Updating a config file..."
 
-ynh_add_config --template="default.json" --destination="$final_path/config/default.json"
+domain=$new_domain
+path_url=$new_path
+
+ynh_add_config --template="../conf/default.json" --destination="$final_path/config/default.json"
 
 chmod 400 "$final_path/config/default.json"
 chown $app:$app "$final_path/config/default.json"
@@ -123,6 +132,7 @@ chown $app:$app "$final_path/config/default.json"
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --time --weight=1
 
+# Start a systemd service
 ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
 
 #=================================================

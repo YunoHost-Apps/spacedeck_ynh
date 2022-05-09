@@ -1,39 +1,38 @@
 {
-    "team_name": "My Open Spacedeck",
-    "contact_email": "webmaster@__DOMAIN__",
-  
-    "host": "localhost",
-    "port": __PORT__,
-    "endpoint": "https://__DOMAIN____PATH__",
-    "invite_code": "__INVITE_SECRET__",
-  
-    "storage_dialect": "sqlite",
-  
-    "storage_host": "localhost",
-    "storage_database": "spacedeck",
-    "storage_username": "username",
-    "storage_password": "password",
-  
-    "storage_local_path": "__DATADIR__/storage",
-    "storage_local_db": "./database/database.sqlite",
-    "storage_region": "eu-central-1",
-    "storage_endpoint": "http://localhost:4572",
-    "storage_bucket": "my_spacedeck_bucket",
-    "storage_cdn": "/storage",
-   
-    "mongodb_host": "localhost",
-    "redis_mock": true,
-    "redis_host": "localhost",
+  "team_name": "YunoHost Spacedeck",
+  "contact_email": "webmaster@__DOMAIN__",
 
-    "export_api_secret": "__API_SECRET__",
-  
-    "mail_provider": "smtp",
-    "mail_smtp_host": "localhost",
-    "mail_smtp_port": 587,
-    "mail_smtp_secure": false,
-    "mail_smtp_require_tls": false,
-    "mail_smtp_user": "__APP__@__DOMAIN__",
-    "mail_smtp_pass": "",
-    "spacedeck": {}
-  }
-  
+  "host": "localhost",
+  "port": __PORT__,
+  "endpoint": "https://__DOMAIN____PATH__",
+  "invite_code": "__INVITE_SECRET__",
+
+  "storage_dialect": "sqlite",
+
+  "storage_host": "localhost",
+  "storage_database": "spacedeck",
+  "storage_username": "username",
+  "storage_password": "password",
+
+  "storage_local_path": "__DATADIR__/storage",
+  "storage_local_db": "./database/database.sqlite",
+  "storage_region": "eu-central-1",
+  "storage_endpoint": "http://localhost:4572",
+  "storage_bucket": "my_spacedeck_bucket",
+  "storage_cdn": "/storage",
+
+  "mongodb_host": "localhost",
+  "redis_mock": true,
+  "redis_host": "localhost",
+
+  "export_api_secret": "__API_SECRET__",
+
+  "mail_provider": "smtp",
+  "mail_smtp_host": "localhost",
+  "mail_smtp_port": 25,
+  "mail_smtp_secure": false,
+  "mail_smtp_require_tls": false,
+  "mail_smtp_user": "__APP__@__DOMAIN__",
+  "mail_smtp_pass": "",
+  "spacedeck": {}
+}

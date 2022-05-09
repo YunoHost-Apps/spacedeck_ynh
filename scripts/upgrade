@@ -116,7 +116,6 @@ ynh_script_progression --message="Installing NodeJS dependencies..." --weight=1
 
 pushd $final_path
 	ynh_exec_as $app $ynh_node_load_PATH $ynh_npm --loglevel=error install
-	ynh_exec_as $app $ynh_node_load_PATH $ynh_npm --loglevel=error audit fix
 popd
 
 #=================================================

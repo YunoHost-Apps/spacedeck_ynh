@@ -7,6 +7,7 @@
 #=================================================
 
 source _common.sh
+source ynh_send_readme_to_admin__2
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -189,6 +190,14 @@ fi
 ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
 ynh_systemd_action --service_name=nginx --action=reload
+
+
+#=================================================
+# SEND A README FOR THE ADMIN
+#=================================================
+ynh_script_progression --message="Sending a readme for the admin..."
+
+ynh_send_readme_to_admin --app_message="msg_install"
 
 #=================================================
 # END OF SCRIPT

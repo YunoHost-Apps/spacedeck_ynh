@@ -7,6 +7,7 @@
 #=================================================
 
 source _common.sh
+source ynh_send_readme_to_admin__2
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -65,7 +66,6 @@ ynh_app_setting_set --app=$app --key=port --value=$port
 ynh_script_progression --message="Installing dependencies..." --weight=1
 
 ynh_install_app_dependencies $pkg_dependencies
-
 ynh_install_nodejs --nodejs_version=$NODEJS_VERSION
 
 #=================================================
@@ -105,8 +105,7 @@ ynh_add_nginx_config
 ynh_script_progression --message="Installing NodeJS dependencies..." --weight=1
 
 pushd $final_path
-	ynh_exec_as $app $ynh_node_load_PATH $ynh_npm --loglevel=error install
-	ynh_exec_as $app $ynh_node_load_PATH $ynh_npm --loglevel=error audit fix
+		ynh_exec_as $app $ynh_node_load_PATH $ynh_npm --loglevel=error install
 popd
 
 #=================================================
@@ -191,6 +190,14 @@ fi
 ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
 ynh_systemd_action --service_name=nginx --action=reload
+
+
+#=================================================
+# SEND A README FOR THE ADMIN
+#=================================================
+ynh_script_progression --message="Sending a readme for the admin..."
+
+ynh_send_readme_to_admin --app_message="msg_install"
 
 #=================================================
 # END OF SCRIPT

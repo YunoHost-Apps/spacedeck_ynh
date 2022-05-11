@@ -18,7 +18,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 A web based, real time, collaborative whiteboard application with rich media support
 
 
-**Shipped version:** 2021.08.10~ynh1
+**Shipped version:** 2022.05.09~ynh1
 
 
 
@@ -30,6 +30,8 @@ A web based, real time, collaborative whiteboard application with rich media sup
 
 * The app can only be installed at the root of a domain
 * There is no integration with YunoHost SSO
+* A email is send at the end of the installation with the Beta Invite Code
+
 ## Documentation and resources
 
 * Official app website: https://spacedeck.com

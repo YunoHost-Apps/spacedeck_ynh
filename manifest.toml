@@ -4,7 +4,8 @@ packaging_format = 2
 
 id = "spacedeck"
 name = "Spacedeck"
-description.en = "A web based, real time, collaborative whiteboard application with rich media support"
+description.en = "Real time, collaborative whiteboard application with rich media support"
+description.fr = "Tableau blanc collaborative en temps réel basée avec prise en charge de médias riches"
 
 version = "2022.05.09~ynh2"
 
@@ -18,8 +19,11 @@ code = "https://github.com/spacedeck/spacedeck-open"
 yunohost = ">=11.2"
 architectures = ["amd64"]
 multi_instance = true
+
 ldap = false
+
 sso = false
+
 disk = "50M"
 ram.build = "300M"
 ram.runtime = "20M"

@@ -2,7 +2,7 @@
   "team_name": "YunoHost Spacedeck",
   "contact_email": "webmaster@__DOMAIN__",
 
-  "host": "localhost",
+  "host": "127.0.0.1",
   "port": __PORT__,
   "endpoint": "https://__DOMAIN____PATH__",
   "invite_code": "__INVITE_SECRET__",

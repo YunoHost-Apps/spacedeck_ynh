@@ -19,7 +19,7 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 A web based, real time, collaborative whiteboard application with rich media support
 
 
-**Version incluse :** 2022.05.09~ynh2
+**Version incluse :** 2023.09.21~ynh1
 
 ## Captures d’écran
 

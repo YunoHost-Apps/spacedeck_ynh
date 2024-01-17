@@ -1,0 +1,61 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "spacedeck"
+name = "Spacedeck"
+description.en = "A web based, real time, collaborative whiteboard application with rich media support"
+
+version = "2022.05.09~ynh2"
+
+maintainers = ["tituspijean"]
+
+[upstream]
+license = "AGPL-3.0-only"
+code = "https://github.com/spacedeck/spacedeck-open"
+
+[integration]
+yunohost = ">=11.2"
+architectures = ["amd64"]
+multi_instance = true
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "300M"
+ram.runtime = "20M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+    [resources.sources.main]
+    url = "https://github.com/spacedeck/spacedeck-open/archive/1109537675cd83f87499a37d37ef6b7a6efcaa4d.tar.gz"
+    sha256 = "2abb471efb7343ee809cfe389e0d9c7a8c7359765d56d80725758b804a72d848"
+
+    autoupdate.strategy = "latest_github_commit"
+    autoupdate.asset = "tarball"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.data_dir]
+    subdirs = ["storage"]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]
+    main.default = 8095
+
+    [resources.apt]
+    packages = [
+        "graphicsmagick",
+        "ffmpeg",
+        "ghostscript",
+    ]

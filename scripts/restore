@@ -48,6 +48,8 @@ yunohost service add "$app" --description="$app whiteboard" --log="/var/log/$app
 
 ynh_restore_file --origin_path="/etc/logrotate.d/$app"
 
+ynh_restore_file --origin_path="/var/log/$app/"
+
 #=================================================
 # RELOAD NGINX AND THE APP SERVICE
 #=================================================

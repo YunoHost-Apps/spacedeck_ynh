@@ -7,7 +7,7 @@ name = "Spacedeck"
 description.en = "Real time, collaborative whiteboard application with rich media support"
 description.fr = "Tableau blanc collaborative en temps réel basée avec prise en charge de médias riches"
 
-version = "2022.05.09~ynh2"
+version = "2023.09.21~ynh1"
 
 maintainers = ["tituspijean"]
 
@@ -38,8 +38,8 @@ ram.runtime = "20M"
 
 [resources]
     [resources.sources.main]
-    url = "https://github.com/spacedeck/spacedeck-open/archive/1109537675cd83f87499a37d37ef6b7a6efcaa4d.tar.gz"
-    sha256 = "2abb471efb7343ee809cfe389e0d9c7a8c7359765d56d80725758b804a72d848"
+    url = "https://github.com/spacedeck/spacedeck-open/archive/a5914ab600e9f4ae3f42d9361195a3696843903e.tar.gz"
+    sha256 = "6a3fa976dc05a84c9f006bad0fe73518443f4060c04398168153e9dd1f97d5e1"
 
     autoupdate.strategy = "latest_github_commit"
     autoupdate.asset = "tarball"

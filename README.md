@@ -19,22 +19,14 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 A web based, real time, collaborative whiteboard application with rich media support
 
 
-**Shipped version:** 2022.05.09~ynh1
+**Shipped version:** 2022.05.09~ynh2
 
 ## Screenshots
 
 ![Screenshot of Spacedeck](./doc/screenshots/spacedeck.png)
 
-## Disclaimers / important information
-
-* ARM and ARM64 architectures are not supported
-* The app can only be installed at the root of a domain
-* There is no integration with YunoHost SSO
-* A email is send at the end of the installation with the Beta Invite Code
-
 ## Documentation and resources
 
-* Official app website: <https://spacedeck.com>
 * Upstream app code repository: <https://github.com/spacedeck/spacedeck-open>
 * YunoHost Store: <https://apps.yunohost.org/app/spacedeck>
 * Report a bug: <https://github.com/YunoHost-Apps/spacedeck_ynh/issues>

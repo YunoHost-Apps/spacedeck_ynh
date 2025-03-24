@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # Spacedeck para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/spacedeck.svg)](https://dash.yunohost.org/appci/app/spacedeck) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/spacedeck.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/spacedeck.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/spacedeck)](https://ci-apps.yunohost.org/ci/apps/spacedeck/)
+![Estado funcional](https://apps.yunohost.org/badge/state/spacedeck)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/spacedeck)
 
 [![Instalar Spacedeck con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=spacedeck)
 
@@ -19,7 +21,7 @@ No se debe editar a mano.
 A web based, real time, collaborative whiteboard application with rich media support
 
 
-**Versión actual:** 2023.09.21~ynh1
+**Versión actual:** 2023.09.21~ynh2
 
 ## Capturas
 
@@ -33,7 +35,7 @@ A web based, real time, collaborative whiteboard application with rich media sup
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/spacedeck_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/spacedeck_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 

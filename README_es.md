@@ -3,7 +3,7 @@ Este archivo README esta generado automaticamente<https://github.com/YunoHost/ap
 No se debe editar a mano.
 -->
 
-# Spacedeck para Yunohost
+# Spacedeck para YunoHost
 
 [![Nivel de integración](https://apps.yunohost.org/badge/integration/spacedeck)](https://ci-apps.yunohost.org/ci/apps/spacedeck/)
 ![Estado funcional](https://apps.yunohost.org/badge/state/spacedeck)

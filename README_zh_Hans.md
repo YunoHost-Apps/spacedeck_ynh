@@ -5,7 +5,9 @@
 
 # YunoHost 上的 Spacedeck
 
-[![集成程度](https://dash.yunohost.org/integration/spacedeck.svg)](https://dash.yunohost.org/appci/app/spacedeck) ![工作状态](https://ci-apps.yunohost.org/ci/badges/spacedeck.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/spacedeck.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/spacedeck)](https://ci-apps.yunohost.org/ci/apps/spacedeck/)
+![工作状态](https://apps.yunohost.org/badge/state/spacedeck)
+![维护状态](https://apps.yunohost.org/badge/maintained/spacedeck)
 
 [![使用 YunoHost 安装 Spacedeck](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=spacedeck)
 
@@ -19,7 +21,7 @@
 A web based, real time, collaborative whiteboard application with rich media support
 
 
-**分发版本：** 2023.09.21~ynh1
+**分发版本：** 2023.09.21~ynh2
 
 ## 截图
 

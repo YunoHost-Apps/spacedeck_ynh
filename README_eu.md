@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # Spacedeck YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/spacedeck.svg)](https://dash.yunohost.org/appci/app/spacedeck) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/spacedeck.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/spacedeck.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/spacedeck)](https://ci-apps.yunohost.org/ci/apps/spacedeck/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/spacedeck)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/spacedeck)
 
 [![Instalatu Spacedeck YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=spacedeck)
 
@@ -19,7 +21,7 @@ EZ editatu eskuz.
 A web based, real time, collaborative whiteboard application with rich media support
 
 
-**Paketatutako bertsioa:** 2023.09.21~ynh1
+**Paketatutako bertsioa:** 2023.09.21~ynh2
 
 ## Pantaila-argazkiak
 

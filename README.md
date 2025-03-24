@@ -5,7 +5,9 @@ It shall NOT be edited by hand.
 
 # Spacedeck for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/spacedeck.svg)](https://dash.yunohost.org/appci/app/spacedeck) ![Working status](https://ci-apps.yunohost.org/ci/badges/spacedeck.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/spacedeck.maintain.svg)
+[![Integration level](https://apps.yunohost.org/badge/integration/spacedeck)](https://ci-apps.yunohost.org/ci/apps/spacedeck/)
+![Working status](https://apps.yunohost.org/badge/state/spacedeck)
+![Maintenance status](https://apps.yunohost.org/badge/maintained/spacedeck)
 
 [![Install Spacedeck with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=spacedeck)
 
@@ -19,7 +21,7 @@ It shall NOT be edited by hand.
 A web based, real time, collaborative whiteboard application with rich media support
 
 
-**Shipped version:** 2023.09.21~ynh1
+**Shipped version:** 2023.09.21~ynh2
 
 ## Screenshots
 

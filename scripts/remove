@@ -6,7 +6,7 @@
 # IMPORT GENERIC HELPERS
 #=================================================
 
-source _common.sh
+
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -32,9 +32,9 @@ ynh_remove_nginx_config
 #=================================================
 # REMOVE NODEJS
 #=================================================
-ynh_script_progression --message="Removing NodeJS..." --weight=1
+#REMOVEME? ynh_script_progression --message="Removing NodeJS..." --weight=1
 
-ynh_remove_nodejs
+#REMOVEME? ynh_remove_nodejs
 
 #=================================================
 # END OF SCRIPT

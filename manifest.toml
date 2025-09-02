@@ -63,3 +63,6 @@ ram.runtime = "20M"
         "ffmpeg",
         "ghostscript",
     ]
+
+    [resources.nodejs]
+    version = "18"

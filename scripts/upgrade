@@ -6,7 +6,7 @@
 # IMPORT GENERIC HELPERS
 #=================================================
 
-source _common.sh
+
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -26,9 +26,9 @@ ynh_systemd_action --service_name=$app --action="stop" --log_path="/var/log/$app
 #=================================================
 # UPGRADE NODEJS
 #=================================================
-ynh_script_progression --message="Upgrading NodeJS..." --weight=1
+#REMOVEME? ynh_script_progression --message="Upgrading NodeJS..." --weight=1
 
-ynh_install_nodejs --nodejs_version="$NODEJS_VERSION"
+#REMOVEME? ynh_install_nodejs --#REMOVEME? nodejs_version="$NODEJS_VERSION"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -48,7 +48,7 @@ chown -R "$app:www-data" "$install_dir"
 ynh_script_progression --message="Building $app..." --weight=3
 
 pushd "$install_dir"
-    ynh_use_nodejs
+    #REMOVEME? ynh_use_nodejs
     ynh_exec_as "$app" "$ynh_node_load_PATH" "$ynh_npm" --loglevel=error install
 popd
 

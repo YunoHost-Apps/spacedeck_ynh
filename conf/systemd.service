@@ -1,5 +1,5 @@
 [Unit]
-Description=__APP__ service
+Description=SpaceDeck: collaborative whiteboard application
 After=network.target
 
 [Service]

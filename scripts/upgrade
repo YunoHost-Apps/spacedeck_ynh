@@ -23,7 +23,6 @@ ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="config/default
 ynh_script_progression "Building $app..."
 
 pushd "$install_dir"
-
     ynh_exec_as_app npm --loglevel=error install
 popd
 

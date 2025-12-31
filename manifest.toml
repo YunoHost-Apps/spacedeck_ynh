@@ -16,12 +16,12 @@ license = "AGPL-3.0-only"
 code = "https://github.com/spacedeck/spacedeck-open"
 
 [integration]
-yunohost = ">=11.2"
+yunohost = ">=12.1.17"
+helpers_version = "2.1"
 architectures = ["amd64"]
 multi_instance = true
 
 ldap = false
-
 sso = false
 
 disk = "50M"
@@ -47,6 +47,7 @@ ram.runtime = "20M"
     [resources.system_user]
 
     [resources.install_dir]
+    group = "www-data:r-x"
 
     [resources.data_dir]
     subdirs = ["storage"]
@@ -63,3 +64,7 @@ ram.runtime = "20M"
         "ffmpeg",
         "ghostscript",
     ]
+
+    [resources.nodejs]
+    version = "18"
+    

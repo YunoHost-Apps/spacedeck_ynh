@@ -45,6 +45,7 @@ ram.runtime = "20M"
     autoupdate.asset = "tarball"
 
     [resources.system_user]
+    allow_email = true
 
     [resources.install_dir]
     group = "www-data:r-x"

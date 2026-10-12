@@ -16,7 +16,7 @@ smtp_host=$(cat /etc/yunohost/current_host)
 ynh_script_progression "Upgrading source files..."
 
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="config/default.json"
+ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="config/default.json database/database.sqlite"
 
 #=================================================
 # NODEJS BUILD

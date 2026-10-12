@@ -6,7 +6,7 @@ source /usr/share/yunohost/helpers
 # INITIALIZE AND STORE SETTINGS
 #=================================================
 
-path="/"
+# path="/"
 
 invite_secret=$(ynh_string_random --length=32)
 api_secret=$(ynh_string_random --length=32)

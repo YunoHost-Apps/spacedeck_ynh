@@ -16,7 +16,7 @@ license = "AGPL-3.0-only"
 code = "https://github.com/spacedeck/spacedeck-open"
 
 [integration]
-yunohost = ">=12.1.17"
+yunohost = ">=12.1.38"
 helpers_version = "2.1"
 architectures = ["amd64"]
 multi_instance = true

@@ -13,6 +13,7 @@ api_secret=$(ynh_string_random --length=32)
 
 ynh_app_setting_set --key=invite_secret --value="$invite_secret"
 ynh_app_setting_set --key=api_secret --value="$api_secret"
+smtp_host=$(cat /etc/yunohost/current_host)
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE

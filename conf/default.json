@@ -1,6 +1,6 @@
 {
   "team_name": "YunoHost Spacedeck",
-  "contact_email": "webmaster@__DOMAIN__",
+  "contact_email": "__APP__@__DOMAIN__",
 
   "host": "127.0.0.1",
   "port": __PORT__,
@@ -28,11 +28,11 @@
   "export_api_secret": "__API_SECRET__",
 
   "mail_provider": "smtp",
-  "mail_smtp_host": "localhost",
+  "mail_smtp_host": "__SMTP_HOST__",
   "mail_smtp_port": 25,
   "mail_smtp_secure": false,
   "mail_smtp_require_tls": false,
-  "mail_smtp_user": "__APP__@__DOMAIN__",
+  "mail_smtp_user": "__APP__",
   "mail_smtp_pass": "__MAIL_PWD__",
   "spacedeck": {}
 }

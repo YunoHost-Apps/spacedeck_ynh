@@ -29,9 +29,9 @@
 
   "mail_provider": "smtp",
   "mail_smtp_host": "__SMTP_HOST__",
-  "mail_smtp_port": 25,
+  "mail_smtp_port": 587,
   "mail_smtp_secure": false,
-  "mail_smtp_require_tls": false,
+  "mail_smtp_require_tls": true,
   "mail_smtp_user": "__APP__",
   "mail_smtp_pass": "__MAIL_PWD__",
   "spacedeck": {}
